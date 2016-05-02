@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link th:href="@{css/bootstrap.css}" rel="stylesheet"/>
+<title>用户列表</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col-md-12" style="padding-top:20px;">
+		<ul class="list-group">
+		  <li class="list-group-item" th:each="user:${allusers}" th:text="${user.name}"></li>
+		</ul>
+	</div>
+</div>
+</div>
+<script th:src="@{js/jquery.min.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+</body>
+</html>
